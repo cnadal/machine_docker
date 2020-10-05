@@ -31,4 +31,15 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
 	
 	MYSQL_ROOT_PASS=root
 
-        
+  4 - Vous pourrez ensuite, à partir du dossier cloné exécuter vos conteneurs docker avec l'instruction
+  
+  	docker-compose build	 	la première fois
+	docker-compose up -d		exécute les conteneurs
+					web, port 8082
+					phpmyadmin, port 8083
+					musql, port 3306
+					
+					
+	
+	
+	
