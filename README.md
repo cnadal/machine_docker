@@ -6,8 +6,11 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
         ./get-docker.sh
 
 2 - La commande docker-compose
+    
     Pour ce faire :
-    chmod 755 ./install-docker-compose
+    
+        chmod 755 ./install-docker-compose
+    
         ./install-docker-compose
     
     Ce fichier contient la commande suivante
