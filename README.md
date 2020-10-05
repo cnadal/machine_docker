@@ -2,7 +2,8 @@ Ce repo sous github contient les fichiers de bases permettant de mettre en place
 
 0 - pour cloner ce repo :
 	
-	Déplacez vous dans un dossier
+	-- Déplacez vous dans un dossier
+	
 	git clone https://github.com/cnadal/machine_docker.git
 	
 	-- Cela créera le dossier machine_docker
