@@ -2,11 +2,13 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
 
 1 - Docker en exécutant le script docker.sh
    
+   
+   
    Pour ce faire :
+      
+      chmod 755 ./get-docker.sh
         
-        chmod 755 ./get-docker.sh
-        
-        ./get-docker.sh
+      ./get-docker.sh
 
 2 - La commande docker-compose
     
