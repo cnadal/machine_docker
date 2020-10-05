@@ -19,10 +19,15 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
         
 3 - A partir de là , il faut configurer le fichier .env avec votre nom de login car par défaut ce sont des services reliés à cyr qui vont être créés
 	DB_NAME=testcyr
+	
 	PROJECT_NAME=testcyr
+	
 	PROJECT_PATH=/var/www/html
+	
 	MYSQL_USER_NAME=cyr
+	
 	MYSQL_USER_PASSWORD=toto
+	
 	MYSQL_ROOT_PASS=root
 
         
