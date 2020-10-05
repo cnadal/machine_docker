@@ -1,3 +1,4 @@
+
 Ce repo sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) des services (conteneurs docker)
 
 0 - pour cloner ce repo :
@@ -43,7 +44,7 @@ Ce repo sous github contient les fichiers de bases permettant de mettre en place
   
   	docker-compose build	 	la première fois
 	docker-compose up -d		exécute les conteneurs
-					web, port 8082
+					web PHP7.4, port 8082
 					phpmyadmin, port 8083
 					mysql, port 3306
 	docker-compose stop		pour stopper les conteneurs
