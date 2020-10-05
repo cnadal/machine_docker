@@ -1,8 +1,11 @@
 Cet espace sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) :
 
 1 - Docker en exécutant le script docker.sh
-    Pour ce faire :
+   
+   Pour ce faire :
+        
         chmod 755 ./get-docker.sh
+        
         ./get-docker.sh
 
 2 - La commande docker-compose
