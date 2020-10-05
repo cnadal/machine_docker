@@ -1,0 +1,49 @@
+version: '3.4'
+services:
+  web:
+    build: docker/apache
+    container_name: ${PROJECT_NAME}_web
+    volumes:
+# les fichiers du site seront à placer dans le dossier web suivi du nom du projet
+     - ./web_${PROJECT_NAME}:${PROJECT_PATH}:cached
+     - ./docker/apache/sites_enabled:/etc/apache2/sites_enabled
+     - ./docker/php/custom-php.ini:/use/local/etc/php/conf.d/custom-php.ini
+#     - ./docker/apache/conf:/etc/apache2/conf
+    depends_on:
+     - db
+    ports:
+     - "80:80"
+#     - "443:443"
+  db:
+    image: mysql:5.7
+    container_name: ${PROJECT_NAME}_mysql
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      # on pourra utiliser le user user
+      MYSQL_USER: ${MYSQL_USER_NAME}
+      # le mdp password
+      MYSQL_PASSWORD: ${MYSQL_USER_PASSWORD}
+      # le password pour le root access
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+      # Where our data will be persisted
+    volumes:
+      - ./docker/db/custom.cnf:/etc/mysql/conf.d/custom.cnf:cached
+      - ./db_data:/var/lib/mysql:cached
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ${PROJECT_NAME}_pma
+    depends_on:
+     - db
+    ports:
+     - "8083:80"
+    environment:
+     - PMA_HOST=db
+#     - PMA_USER=root
+#     - PMA_PASSWORD=root
+# Names our volume
+volumes:
+  db_data:
+
