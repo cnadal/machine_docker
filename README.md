@@ -12,7 +12,7 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
 
 2 - La commande docker-compose
     
-    Pour ce faire :
+   Pour ce faire :
     
         chmod 755 ./install-docker-compose
     
