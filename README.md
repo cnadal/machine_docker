@@ -37,8 +37,11 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
 	docker-compose up -d		exécute les conteneurs
 					web, port 8082
 					phpmyadmin, port 8083
-					musql, port 3306
-					
+					mysql, port 3306
+	docker-compose stop		pour stopper les conteneurs
+	
+	docker ps			pour lister les conteneurs (on peut alors voir id, port et nom des conteneurs)
+	docker exec -it testcyr bash	pour exécuter bash dans le conteneur testcyr (changer de nom ou d'id de conteneur cf commande docker ps)
 					
 	
 	
