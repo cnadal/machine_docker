@@ -1,13 +1,20 @@
-Cet espace sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) :
+Ce repo sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) des services (conteneurs docker)
 
-1 - Docker en exécutant le script docker.sh
+0 - pour cloner ce repo :
+	
+	Déplacez vous dans un dossier
+	git clone https://github.com/cnadal/machine_docker.git
+	
+	-- Cela créera le dossier machine_docker
+	
+1 - Dans le dossier machine_docker, installer docker avec :
    
       
       chmod 755 ./get-docker.sh
         
       ./get-docker.sh
 
-2 - La commande docker-compose
+2 - Dans le dossier machine_docker, installer la commande docker-compose
     
     
         chmod 755 ./install-docker-compose
@@ -17,7 +24,7 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
     Ce fichier contient la commande suivante
         sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         
-3 - A partir de là , il faut configurer le fichier .env avec votre nom de login car par défaut ce sont des services reliés à cyr qui vont être créés, remplacez <b>cyr</b> par votre Nom, ex pour vivian :
+3 - Config : à partir de là , il faut configurer le fichier .env avec votre nom de login car par défaut ce sont des services reliés à cyr qui vont être créés, remplacez <b>cyr</b> par votre Nom, ex pour vivian :
 
 	DB_NAME=testcyr				==> 	DB_NAME=testvivian
 	
@@ -31,7 +38,7 @@ Cet espace sous github contient les fichiers de bases permettant de mettre en pl
 	
 	MYSQL_ROOT_PASS=root
 
-  4 - Vous pourrez ensuite, à partir du dossier cloné exécuter vos conteneurs docker avec l'instruction
+4 - Test : vous pourrez ensuite, exécuter vos conteneurs docker avec la.les instruction.s
   
   	docker-compose build	 	la première fois
 	docker-compose up -d		exécute les conteneurs
