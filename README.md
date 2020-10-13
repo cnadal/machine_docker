@@ -35,13 +35,13 @@ Ce repo sous github contient les fichiers de bases permettant de mettre en place
 > Il faut ensuite *configurer* le fichier <b>.env</b> avec votre nom de
 > login car par défaut ce sont des services reliés à cyr qui vont être créés, remplacez <b>cyr</b> par votre Nom, ex pour vivian :
 
-	DB_NAME=testcyr					==> 	DB_NAME=testvivian
+	DB_NAME=testcyr				==> 	DB_NAME=testvivian
 	
 	PROJECT_NAME=testcyr			==> 	PROJECT_NAME=testvivian
 	
 	PROJECT_PATH=/var/www/html
 	
-	MYSQL_USER_NAME=cyr				==> 	MYSQL_USER_NAME=vivian
+	MYSQL_USER_NAME=cyr			==> 	MYSQL_USER_NAME=vivian
 	
 	MYSQL_USER_PASSWORD=toto
 	
@@ -55,11 +55,11 @@ Ce repo sous github contient les fichiers de bases permettant de mettre en place
   
   	docker-compose build	 	la première fois
 	docker-compose up -d		exécute les conteneurs
-								web,			PHP7.4, port 8082
-								phpmyadmin,	 	port 8083
-								mysql, 			port 3306
+						web,			PHP7.4, port 8082
+						phpmyadmin,	 	port 8083
+						mysql, 			port 3306
 
-	docker-compose stop			pour stopper les conteneurs
+	docker-compose stop		pour stopper les conteneurs
 	
 	docker ps			pour lister les conteneurs (on peut alors voir id, port et nom des conteneurs)
 
