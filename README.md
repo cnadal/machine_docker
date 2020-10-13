@@ -2,6 +2,7 @@
 Ce repo sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) des services (conteneurs docker) web, mysql et phpmyadmin
 
 0 - pour cloner ce repo dans une VM linux :
+	
 	-- Installer git si nécessaire
 	
 	apt-get install git
