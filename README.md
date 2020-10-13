@@ -1,5 +1,5 @@
 
-Ce repo sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) des services (conteneurs docker)
+Ce repo sous github contient les fichiers de bases permettant de mettre en place dans une machine linux (testé sous debian 9++) des services (conteneurs docker) web, mysql et phpmyadmin
 
 0 - pour cloner ce repo :
 	-- Installer git si nécessaire
