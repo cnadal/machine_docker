@@ -30,8 +30,10 @@ services:
       - '3306:3306'
       # Where our data will be persisted
     volumes:
-      - ./docker/db/custom.cnf:/etc/mysql/conf.d/custom.cnf:cached
-      - ./db_data:/var/lib/mysql:cached
+      #- ./docker/db/custom.cnf:/etc/mysql/conf.d/custom.cnf:cached
+      #- ./db_data:/var/lib/mysql:cached
+      - ./docker/db/custom.cnf:/etc/mysql/conf.d/custom.cnf
+      - ./db_data:/var/lib/mysql      
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: ${PROJECT_NAME}_pma
