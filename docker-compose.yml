@@ -25,6 +25,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_USER_PASSWORD}
       # le password pour le root access
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+# Modif limite upload pour les bdd importees
+      UPLOAD_LIMIT: 20M
     ports:
       # <Port exposed> : < MySQL Port running inside container>
       - '3306:3306'
@@ -43,6 +45,8 @@ services:
      - "8083:80"
     environment:
      - PMA_HOST=db
+# Modif limite upload pour les bdd importees
+     - UPLOAD_LIMIT="20M"
 #     - PMA_USER=root
 #     - PMA_PASSWORD=root
 # Names our volume
